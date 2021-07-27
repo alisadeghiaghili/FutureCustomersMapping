@@ -1,0 +1,31 @@
+correctFDCustomerNulls <- function(FDCustomers) {
+  FDCustomers %>% 
+  mutate(RegPassNumber = ifelse(RegPassNumber == "" | is.na(RegPassNumber), NA, RegPassNumber),
+         Account_InquireResult = ifelse(Account_InquireResult == "" | is.na(Account_InquireResult), NA, Account_InquireResult),
+         PersonalAccount_Bank = ifelse(PersonalAccount_Bank == "" | is.na(PersonalAccount_Bank), NA, PersonalAccount_Bank),
+         ID = ifelse(ID == "" | is.na(ID), NA, ID),
+         CustomerID = ifelse(CustomerID == "" | is.na(CustomerID), NA, CustomerID),
+         CustomerCode = ifelse(CustomerCode == "" | is.na(CustomerCode), NA, CustomerCode),
+         LogicalType = ifelse(LogicalType == "" | is.na(LogicalType), NA, LogicalType),
+         Name = ifelse(Name == "" | is.na(Name), NA, Name),
+         FatherManager = ifelse(FatherManager == "" | is.na(FatherManager), NA, FatherManager),
+         NationalID = ifelse(NationalID == "" | is.na(NationalID), NA, NationalID),
+         Hometown = ifelse(Hometown == "" | is.na(Hometown), NA, Hometown),
+         Status = ifelse(Status == "" | is.na(Status), NA, Status),
+         Capital = ifelse(Capital == "" | is.na(Capital), NA, Capital),
+         MaxPositionCount = ifelse(MaxPositionCount == "" | is.na(MaxPositionCount), NA, MaxPositionCount),
+         Comments = ifelse(Comments == "" | is.na(Comments), NA, Comments),
+         Account_OwnerName = ifelse(Account_OwnerName == "" | is.na(Account_OwnerName), NA, Account_OwnerName),
+         Account_Bank = ifelse(Account_Bank == "" | is.na(Account_Bank), NA, Account_Bank),
+         Account_Type = ifelse(Account_Type == "" | is.na(Account_Type), NA, Account_Type),
+         Account_Number = ifelse(Account_Number == "" | is.na(Account_Number), NA, Account_Number),
+         PersonalAccount_OwnerName = ifelse(PersonalAccount_OwnerName == "" | is.na(PersonalAccount_OwnerName), NA, PersonalAccount_OwnerName),
+         PersonalAccount_Type = ifelse(PersonalAccount_Type == "" | is.na(PersonalAccount_Type), NA, PersonalAccount_Type),
+         PersonalAccount_Number = ifelse(PersonalAccount_Number == "" | is.na(PersonalAccount_Number), NA, PersonalAccount_Number),
+         Kind_ID = ifelse(Kind_ID == "" | is.na(Kind_ID), NA, Kind_ID),
+         Kind_Name = ifelse(Kind_Name == "" | is.na(Kind_Name), NA, Kind_Name),
+         Kind_Kind = ifelse(Kind_Kind == "" | is.na(Kind_Kind), NA, Kind_Kind),
+         Kind_Comments = ifelse(Kind_Comments == "" | is.na(Kind_Comments), NA, Kind_Comments),
+         SourceDatabase_ID = ifelse(SourceDatabase_ID == "" | is.na(SourceDatabase_ID), NA, SourceDatabase_ID)) %>% 
+    return()
+}
